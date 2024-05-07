@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}My Top 10 Video Games{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="heading">My Top 10 Video Games</h1>
+    <p class="description">These are my all-time favourite video games.</p>
+
+    <!--- Card Start --->
+    {% for game in list_of_games %}
+
+    <div class="card">
+        <div class="front" style="background-image: url({{ game['img_url'] }});">
+            <p class="large">{{ game['ranking'] }}</p>
+        </div>
+        <div class="back">
+            <div>
+                <div class="title">{{ game['title'] }}<span class="release_date">({{ game['year'] }})</span></div>
+                <div class="rating">
+                    <label>{{ game['rating']}}</label>
+                    <i class="fas fa-star star"></i>
+                </div>
+                <p class="review">{{ game['review'] }}</p>
+                <p class="overview">
+                    {{ game['description'] }}
+                </p>
+
+                <a href="{{ url_for('edit', game_id=game['id']) }}" class="button">Update</a>
+                <a href="{{ url_for('delete', game_id=game['id']) }}" class="button delete-button">Delete</a>
+
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+    <!--- Card End --->
+</div>
+
+<div class="container text-center add">
+    <a href="{{ url_for('add') }}" class="button">Add Video Game</a>
+</div>
+
+{% endblock %}

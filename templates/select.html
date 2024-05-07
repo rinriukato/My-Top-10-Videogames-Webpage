@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Select Video Game{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="heading">Select Game</h1>
+    {% for game in searched_games %}
+    <p>
+        <a href="{{ url_for('select', game_ref_id=game['game']) }}">{{ game['name'] }}</a>
+    </p>
+    {% endfor %}
+</div>
+{% endblock %}
