@@ -21,16 +21,20 @@ SQL Database via sqlalchemy module in python.
 This application uses the [IGDB](https://www.igdb.com/) API to get information such as games, titles, and cover art from their database. 
 
 
-# Demononstration
+# Demonstration
+### Main Page Look
 ![Example of main page](https://github.com/rinriukato/My-Top-10-Videogames-Webpage/blob/main/sample-images/main-page-example.gif)
 Quick example of what the main page looks like. Uses Jinja to dynamically read and display all card templates and places them onto the website. Each card containing a name, release date, your own review, and a summary provided by IGMB
 
+### Create new cards
 ![Example of Add](https://github.com/rinriukato/My-Top-10-Videogames-Webpage/blob/main/sample-images/add-example.gif)
 You can add a new card by pressing the "Add Video Game" button at the bottom. You will be prompted to a short form to search for a video game title. This will make an API call to the IGDB to search for up to 50 titles with that similar name and the will redirect you to the select page so that you can choose the title. (Some titles have deadlinks and will cause 404. This is most likely because IGDB entires are provided by users and they have duplicated/unfinished entires). Next, you will provide a rating and review. Once completed, the main page will now have your new card. Complete with cover, release date, and summary from IGDB. It's position in the list is based on its rating you've provided. 
 
+### Update existing cards
 ![Example of Update](https://github.com/rinriukato/My-Top-10-Videogames-Webpage/blob/main/sample-images/update-example.gif)
 Here is an example of how you can update existing entries. You can update your own rating and review on the card and once finished, it will redirect you back to the main page where the order of the cards will be updated in descending order (number 1 at the bottom).
 
+### Delete existing cards
 ![Example of Delete](https://github.com/rinriukato/My-Top-10-Videogames-Webpage/blob/main/sample-images/delete-example.gif)
 If you had wish to delete a card, simply click the "delete" button on each card and the page will automatically delete that entry from the database and the page will reflect that change.
 
