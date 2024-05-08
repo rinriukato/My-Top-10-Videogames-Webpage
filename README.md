@@ -24,7 +24,7 @@ This application uses the [IGDB](https://www.igdb.com/) API to get information s
 # Demonstration
 ## Main Page Look
 ![Example of main page](https://github.com/rinriukato/My-Top-10-Videogames-Webpage/blob/main/sample-images/main-page-example.gif)
-Quick example of what the main page looks like. Uses Jinja to dynamically read and display all card templates and places them onto the website. Each card containing a name, release date, your own review, and a summary provided by IGMB
+Quick example of what the main page looks like. Uses Jinja to dynamically read and display all card templates and places them onto the website. Each card containing a name, release date, your own review, and a summary provided by IGDB
 
 ## Create new cards
 ![Example of Add](https://github.com/rinriukato/My-Top-10-Videogames-Webpage/blob/main/sample-images/add-example.gif)
